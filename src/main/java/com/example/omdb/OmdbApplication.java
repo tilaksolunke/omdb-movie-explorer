@@ -8,7 +8,6 @@ public class OmdbApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OmdbApplication.class, args);
-		System.out.println("Hello Tilak");
 	}
 
 }

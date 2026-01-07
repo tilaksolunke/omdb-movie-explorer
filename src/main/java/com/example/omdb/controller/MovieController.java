@@ -4,8 +4,11 @@ import com.example.omdb.service.MovieService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("/api/movies")
+@CrossOrigin(origins = "http://localhost:5173")
+
 public class MovieController {
 
     private final MovieService movieService;
@@ -14,10 +17,9 @@ public class MovieController {
         this.movieService = movieService;
     }
 
-    /**
-     * Search movies by title
-     * Example: GET /api/movies/search?title=batman&page=1
-     */
+
+//     search movies by title
+
     @GetMapping("/search")
     public ResponseEntity<String> searchMovies(
             @RequestParam String title,
@@ -32,10 +34,9 @@ public class MovieController {
     }
 
 
-    /**
-     * Get movie details by IMDB ID
-     * Example: GET /api/movies/tt0372784
-     */
+
+//      Get movie details by IMDB ID
+
     @GetMapping("/{imdbId}")
     public ResponseEntity<String> getMovieDetails(@PathVariable String imdbId) {
 
