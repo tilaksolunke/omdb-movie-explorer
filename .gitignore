@@ -58,3 +58,11 @@ Thumbs.db
 # Optional docs
 ############################
 HELP.md
+
+
+############################
+# React / Node
+############################
+node_modules/
+dist/
+.env
